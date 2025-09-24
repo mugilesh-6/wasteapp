@@ -1,0 +1,154 @@
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 30px 10px;
+    background: linear-gradient(90deg, #4caf50, #81c784);
+    color: white;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Buttons */
+.btn {
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+    background-color: #1976d2;
+    border-color: #1976d2;
+}
+
+.btn-primary:hover {
+    background-color: #1565c0;
+    border-color: #1565c0;
+}
+
+.btn-success {
+    background-color: #388e3c;
+    border-color: #388e3c;
+}
+
+.btn-success:hover {
+    background-color: #2e7d32;
+    border-color: #2e7d32;
+}
+
+.btn-danger {
+    background-color: #d32f2f;
+    border-color: #d32f2f;
+}
+
+.btn-danger:hover {
+    background-color: #c62828;
+    border-color: #c62828;
+}
+
+.btn-info {
+    background-color: #0288d1;
+    border-color: #0288d1;
+}
+
+.btn-info:hover {
+    background-color: #0277bd;
+    border-color: #0277bd;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #5a6268;
+}
+
+/* Flash Messages */
+.alert {
+    font-size: 0.95rem;
+    border-radius: 5px;
+}
+
+/* Tables */
+table {
+    background-color: white;
+}
+
+table th {
+    background-color: #424242 !important;
+    color: white;
+}
+
+table td, table th {
+    vertical-align: middle !important;
+    text-align: center;
+}
+
+/* Forms */
+input.form-control, select.form-select {
+    border-radius: 5px;
+}
+
+label {
+    font-weight: 500;
+}
+
+/* Dashboard Section */
+.container h1 {
+    margin-bottom: 20px;
+}
+
+.container h3 {
+    margin-top: 40px;
+}
+
+/* Common Place Form Toggle */
+#common_place_section {
+    background-color: #e8f5e9;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Progress Bars */
+.progress {
+    height: 25px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #e0e0e0;
+}
+
+.progress-bar {
+    font-weight: 600;
+    line-height: 25px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    table td, table th {
+        font-size: 0.85rem;
+    }
+}
