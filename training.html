@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="mt-5">Mandatory Training</h1>
+
+<!-- Training Modules -->
+<div class="card mt-4 mb-4">
+    <div class="card-body">
+        <h5 class="card-title">Training Modules</h5>
+
+        <!-- Videos -->
+        <h6>Videos:</h6>
+        <ul>
+            <li><a href="https://youtu.be/0ZiD_Lb3Tm0?si=3ms_jGUxfgMe3aqe" target="_blank">Waste Segregation Basics</a></li>
+            <li><a href="https://youtu.be/zy70DAaeFBI?si=FujM_ebyQOZ9pcbN" target="_blank">Composting at Home</a></li>
+            <li><a href="https://youtu.be/6jQ7y_qQYUA?si=2vd8qulan6CBzo6i" target="_blank">Plastic Reuse & Recycling</a></li>
+        </ul>
+
+        <!-- Embedded video -->
+        <div class="ratio ratio-16x9 mb-3">
+            <iframe src="https://www.youtube.com/embed/K6ppCC3lboU?si=jXfGqpwSG6hjwyIS" title="Waste Segregation" allowfullscreen></iframe>
+        </div>
+
+        <!-- Quizzes -->
+        <h6>Quiz:</h6>
+        <form method="POST" class="mb-3">
+            <div class="mb-2">
+                <label>1. What color bin is used for wet waste?</label>
+                <select class="form-select" name="q1" required>
+                    <option value="">Select</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                    <option value="brown">Brown</option>
+                    <option value="red">Red</option>
+                </select>
+            </div>
+
+            <div class="mb-2">
+                <label>2. Which of the following can be composted?</label>
+                <select class="form-select" name="q2" required>
+                    <option value="">Select</option>
+                    <option value="vegetable">Vegetable scraps</option>
+                    <option value="plastic">Plastic wrappers</option>
+                    <option value="metal">Metal cans</option>
+                    <option value="glass">Glass bottles</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit Quiz & Complete Training</button>
+        </form>
+    </div>
+</div>
+
+<!-- Progress Tracker -->
+<div class="mb-4">
+    <h5>Training Status:</h5>
+    {% if completed %}
+        <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 100%;">Completed</div>
+        </div>
+    {% else %}
+        <div class="progress">
+            <div class="progress-bar bg-warning" role="progressbar" style="width: 50%;">In Progress</div>
+        </div>
+    {% endif %}
+</div>
+
+<!-- Delete Account / Logout -->
+<a href="{{ url_for('delete_user') }}" class="btn btn-danger mt-3">Delete My Account</a>
+<a href="{{ url_for('logout') }}" class="btn btn-secondary mt-3 ms-2">Logout</a>
+{% endblock %}

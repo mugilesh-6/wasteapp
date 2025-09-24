@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="text-center mt-5">
+    <h1>Welcome to Waste Management App</h1>
+    <p>Learn, Participate, and Keep Your City Clean!</p>
+
+    <!-- Buttons depending on login status -->
+    <div class="mt-4">
+        {% if user %}
+            <a href="{{ url_for('dashboard') }}" class="btn btn-primary m-2">Dashboard</a>
+            {% if user.get('is_admin') %}
+                <a href="{{ url_for('admin_dashboard') }}" class="btn btn-warning m-2">Admin Dashboard</a>
+            {% endif %}
+            <a href="{{ url_for('logout') }}" class="btn btn-danger m-2">Logout</a>
+        {% else %}
+            <a href="{{ url_for('login') }}" class="btn btn-primary m-2">Login</a>
+            <a href="{{ url_for('register') }}" class="btn btn-success m-2">Register</a>
+        {% endif %}
+    </div>
+
+    <!-- Optional: Featured Sections -->
+    <div class="mt-5">
+        <h3>Why Join Waste Management?</h3>
+        <ul class="list-unstyled">
+            <li>♻️ Learn proper waste segregation</li>
+            <li>🌱 Participate in local composting programs</li>
+            <li>🏙️ Keep your city clean and healthy</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

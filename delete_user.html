@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5 text-center">
+    <h2>Delete My Account</h2>
+    <p class="mt-3">Are you sure you want to delete your account? This action is <strong>irreversible</strong>.</p>
+
+    <div class="mt-4">
+        <a href="{{ url_for('confirm_delete_user') }}" class="btn btn-danger">Yes, Delete My Account</a>
+        <a href="{{ url_for('dashboard') }}" class="btn btn-secondary ms-2">Cancel</a>
+    </div>
+</div>
+{% endblock %}
